@@ -1,13 +1,13 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 const NewsItem = ({title, source, url}) => (
-    <li>
-        <span>
-        <a href={url} target="_blank" class="NewItem">   
-            {title} ({source.name}) 
-        </a>
-        </span>
-    </li>
+    <div className="newsitem">
+        <li>
+            <a href={url} target="_blank" rel="noopener noreferrer" className="newsitem-news"> {title} </a>
+            <NavLink to="/" className="newsitem-source"> ({source.name}) </NavLink>
+        </li>
+    </div>
 );
 
 export default NewsItem;
