@@ -12,6 +12,7 @@ import tim from './pictures/time.png';
 import wsj from './pictures/wsj.png';
 
 
+
 class About extends Component{
     
     render(){
