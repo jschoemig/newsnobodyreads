@@ -8,28 +8,54 @@ class NavBar extends Component {
     
     constructor(props){
         super(props);
-        this.state = {inputValue: ''};
+        this.state = {
+            inputValue: '',
+            search: false
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleEnter = this.handleEnter.bind(this);
+        this.handleState = this.handleState.bind(this);
     }
     
      handleChange(e){            //function to handle state change of input value as soon as something is typed in the the input window
         this.setState(
-        {inputValue: e.target.value}
+        {   inputValue: e.target.value,
+            search: true
+        }
         );
     }
     
     handleSubmit(){
-        this.props.loadNews(this.state.inputValue);  //takes in inputValue and sends it to addTodo function in TodoList -> can access it via passed props (from parent to child!)
-        
+        this.props.loadNews(this.state.inputValue, this.state.search);  //takes in inputValue and sends it to addTodo function in TodoList -> can access it via passed props (from parent to child!)
+        this.props.changeSearchActive();
+        setTimeout(
+            function() {
+                this.setState({inputValue:'', search:false });
+            }
+            .bind(this),
+            3000
+        );
     }
     
     handleEnter = (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
-        this.props.loadNews(this.state.inputValue); 
+        this.props.loadNews(this.state.inputValue,this.state.search); 
+        this.props.changeSearchActive();
+        setTimeout(
+            function() {
+                this.setState({inputValue:'',search:false});
+            }
+            .bind(this),
+            3000
+        );
+
     }
+  }
+  
+  handleState(){
+      this.props.loadNews(this.state.inputValue,this.state.search); 
   }
 
   render(){
@@ -39,8 +65,8 @@ class NavBar extends Component {
     return(
         <div className="navbar">
             <nav>
-                <li><NavLink to="/" style={iconStyle} > nnr.com </NavLink></li>
-                <li><NavLink to="/" style={defaultStyle}> NewsNobodyReads.com </NavLink></li>
+                <li><NavLink to="/" style={iconStyle} onClick={this.handleState}> nnr.com </NavLink></li>
+                <li><NavLink to="/" style={defaultStyle} onClick={this.handleState}> NewsNobodyReads.com </NavLink></li>
             </nav>
             <form className="form">
 				<input type="text" className="form-control" placeholder="Search" 

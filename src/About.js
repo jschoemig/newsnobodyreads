@@ -13,6 +13,8 @@ import wsj from './pictures/wsj.png';
 
 
 
+
+
 class About extends Component{
     
     render(){
@@ -30,8 +32,7 @@ class About extends Component{
                     items: 3
                   }
     };
-        
-
+    
 
         return(
         <div className ="about">
