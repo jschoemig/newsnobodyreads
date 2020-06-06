@@ -88,6 +88,14 @@ p{
   color: grey;
 }
 
+/* Heart Loading Component */
+
+.heart {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
 /* NewsItem Section */
 
 .newsitem li .newsitem-news{
@@ -173,4 +181,5 @@ p{
 
 .footer nav li{
     padding: 20px;
+    color: #3090C7;
 }

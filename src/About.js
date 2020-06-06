@@ -41,16 +41,38 @@ class About extends Component{
                     This is the story behind the project!
                 </h1>
                 <p> 
-                    Humans are more attracted towards violence and fear than to positive news.
-                    The current news seem to take massive advantage of that feeding only negative news back to the public.
-                    This can lead to a negative spiral on a global scale.
+                   Do you feel that general news often focus on the negative side of human nature and interaction?
                 </p>
                 <p> 
-                    Hence this project focuses on looking on the brighter side of things.
-                    NewsNobodyReads.com takes the top headline from the worlds leading newspapers and filters negative reporting out.
+                   Have you noticed that violence and scandals attract public attention more than positive events?
+                </p>
+                 <p> 
+                    Do you think that rather than being fully objective general news selects stories often on their profit potential?
+                </p>
+                <p> 
+                    These thoughts are the motivation behind the project. 
+                    Due to the three raised points, I believe general global news are biased towards negative events.
+                    Where I believe that humans are more inclined to watch the negative, scandalous side of things, I believe at the same time that this natural instint does not always do us good. 
+                    Now NewsNobodyReads.com tries lie the focus specifically on the more positive side of global news.
+                    So what you see on here is what what's really going on in the world today.
+                    To prevent anyone can jump to the scandalous article about mass murdering, or financial anxiety these news are excluded from that page.
+                    This website only allows you to inform yourself about the positive events which are going on in the world. 
+                    And where NewsNobodyReads.com is clearly biased towards on side of the coin that is very much intended. 
+                    It serves as a counterweight to general news webpages out there and human inclincation in general. 
                 </p>
                 <p>
-                    Here are some pictures of the newspapers which have been used for the project.
+                    What you see on the landing page of the website is the product of filter algorithm of thousands of live global news articles as provided by NewsApi. 
+                    The filter criteria are comprised in a way that a certain list of words won't show up in the headlines of the displayed stories. 
+                    The words selected are the words which appear the most often in common newspapers and hence might be the most clicked on target words in the industry.
+                    Hence, with filtering these words out I am not showing the most read news articles online. 
+                    This does not mean I am necessairly filtering out the most read news stories. 
+                    There is a difference. 
+                    Popular news stories might still show up on NewsNobodyReads.com, but when they do it will be the more positive view on these. 
+                </p>
+                <p>
+                    So below you find all the newspapers which filtered online articles built the foundation of this website. 
+                    All of the articles are in English and hence should be available to a large audience. 
+                    I hope you find here a couple of stories which makes you believe the world is not entirly bad.
                 </p>
             </div>
             <div className="slider"> 

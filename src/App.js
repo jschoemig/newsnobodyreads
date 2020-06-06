@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { Switch, Route, Redirect} from 'react-router-dom';
 import Navbar   from './Navbar';
 import Footer   from './Footer';
 import * as apiCalls from './Api';
-import { Switch, Route, Redirect} from 'react-router-dom';
 import NewsList from './NewsList';
 import Technical from './Technical';
 import About from './About';
 import Contact from './Contact';
+import Loading from './Loading';
 
 
 
@@ -17,7 +18,8 @@ import Contact from './Contact';
         super(props);
         this.state = {
             news: [],
-            searchActive:false
+            searchActive:false,
+            loading:false
         };
     }
     
@@ -27,8 +29,16 @@ import Contact from './Contact';
     }
      
     async loadNews(val,search){
+          this.setState({loading:true});
           let news = await apiCalls.getNews(val,search);
-          this.setState({news: news.articles});
+          setTimeout(
+            function() {
+                this.setState({news: news.articles, loading: false});
+            }
+            .bind(this),
+            500
+        );
+
     }
     
     async changeSearchActive(){
@@ -45,14 +55,20 @@ import Contact from './Contact';
    
     
   render(){
-    const searchActive = this.state.searchActive;
+    const searchActive  = this.state.searchActive;
+    const loading       = this.state.loading;
     
     return (
       <div className="app">
         <Navbar loadNews={this.loadNews.bind(this)} changeSearchActive={this.changeSearchActive.bind(this)} />
             <Switch>
-              <Route  exact path="/"
-                      render={() => <NewsList news={this.state.news} />} />
+            
+              {loading? 
+              <Route exact path="/"> <Loading /> </Route>:
+              <Route  exact path="/" 
+                      render={ () => <NewsList news={this.state.news} />} />
+              }
+    
               <Route exact path="/about" >
                       {searchActive ? <Redirect to="/" /> : <About />}
               </Route>
