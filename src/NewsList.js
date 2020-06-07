@@ -14,9 +14,12 @@ class NewsList extends Component{
         ));
         return(
             <div className="newslist">
-                <ol>
-                    {news}
-                </ol>
+                   
+                        {(Object.keys(news).length === 0)? 
+                        <p> No results found for this search request </p> : 
+                        <ol>{news} </ol>
+                        }
+                   
             </div>
             );
     }

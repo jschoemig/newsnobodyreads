@@ -11,7 +11,8 @@ const proxyUrl      = 'https://cors-anywhere.herokuapp.com/';       // this prox
   export async function getNews(val,search){
       if(search){
         return fetch(proxyUrl + url + val + s + key)            // because it is an async function 
-                .then( resp => { return resp.json() });
+                .then( resp => { 
+                  return resp.json() });
       } else {
         return fetch(proxyUrl + url + qInTitle + s + key)            // because it is an async function 
                 .then( resp => { return resp.json() });

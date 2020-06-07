@@ -47,6 +47,7 @@ p{
 	  opacity: 0; */
 }
 
+
 .navbar li{
   padding: 5px;
   font: bold;
@@ -73,6 +74,20 @@ p{
   height:30px;
 }
 
+@media (max-width: 700px){
+  .navbar {
+  	flex-basis:100%;
+	  justify-content: center;
+  }
+  .navbar nav{
+    flex-basis:100%;
+    justify-content: center;
+  }
+  body {
+    margin: 0%;
+  }
+}
+
 /* ---------------- Homepage Section ---------------------- */
 
 /* Newslist Section */
@@ -86,6 +101,14 @@ p{
 
 .newslist ol li{
   color: grey;
+}
+
+.newslist p{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-size:15px;
+  margin: 45px 0px 38px 0px
 }
 
 /* Heart Loading Component */
@@ -169,7 +192,7 @@ p{
 	align-items: center;
 	justify-content: center;
 	color: #fff;
-	padding: 20px 0;
+
 	border-top:1px solid #f857a6;
 	list-style: none;
 	text-decoration:none;
