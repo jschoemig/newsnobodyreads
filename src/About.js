@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import Carousel from 'react-multi-carousel';
+//import Carousel from 'react-multi-carousel';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import 'react-multi-carousel/lib/styles.css';
 import alj from './pictures/aljazeera.jpg';
 import bbc from './pictures/bbcnews.png';
@@ -18,20 +21,33 @@ import wsj from './pictures/wsj.png';
 class About extends Component{
     
     render(){
-        const responsive = {
-                  desktop: {
-                    breakpoint: { max: 3000, min: 1024 },
-                    items: 4
-                  },
-                  tablet: {
-                    breakpoint: { max: 1024, min: 464 },
-                    items: 3
-                  },
-                  mobile: {
-                    breakpoint: { max: 464, min: 0 },
-                    items: 3
-                  }
-    };
+        const settings = {
+                      dots: true,
+                      arrows:false, 
+                      infinite: true,
+                      speed: 5000,
+                      slidesToShow: 7,
+                      slidesToScroll: 3,
+                      autoplay:false,
+                      centermode: true,
+                      responsive: [
+                            {
+                              breakpoint: 700,
+                              settings: {
+                                slidesToShow: 5,
+                              }
+                            },
+                            {
+                              breakpoint: 480,
+                              settings: {
+                                slidesToShow: 3,
+                                autoplay:true,
+                                autoplaySpeed: 0,
+                                dots:false
+                              }
+                            }
+                          ]
+                };
     
 
         return(
@@ -76,14 +92,7 @@ class About extends Component{
                 </p>
             </div>
             <div className="slider"> 
-                <Carousel 
-                    responsive={responsive}
-                    showDots={false}
-                    infinite={true}
-                    centerMode={false}
-                    arrows={true}
-                    autoPlay={false}
-                    autoPlaySpeed={1000}>
+                <Slider {...settings}>
                     <div>
                        <img src={alj} alt="al-jazeera-en"></img>
                     </div>
@@ -111,7 +120,7 @@ class About extends Component{
                     <div>
                       <img src={wsj} alt="wall-street-journal"></img>
                     </div>
-                  </Carousel>
+                  </Slider>
             </div>
         </div>
         );

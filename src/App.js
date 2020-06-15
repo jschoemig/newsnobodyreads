@@ -8,6 +8,7 @@ import Technical from './Technical';
 import About from './About';
 import Contact from './Contact';
 import Loading from './Loading';
+import Oops from './Oops';
 
 
 
@@ -19,7 +20,8 @@ import Loading from './Loading';
         this.state = {
             news: [],
             searchActive:false,
-            loading:false
+            loading:false,
+            error:true
         };
     }
     
@@ -31,6 +33,8 @@ import Loading from './Loading';
     async loadNews(val,search){
           this.setState({loading:true});
           let news = await apiCalls.getNews(val,search);
+          if (typeof news === "undefined"){this.setState({error:true})}
+          else{
           setTimeout(
             function() {
                 this.setState({news: news.articles, loading: false});
@@ -38,6 +42,7 @@ import Loading from './Loading';
             .bind(this),
             500
         );
+          }
 
     }
     
@@ -57,18 +62,20 @@ import Loading from './Loading';
   render(){
     const searchActive  = this.state.searchActive;
     const loading       = this.state.loading;
+    const error         = this.state.error;
     
     return (
       <div className="app">
         <Navbar loadNews={this.loadNews.bind(this)} changeSearchActive={this.changeSearchActive.bind(this)} />
-            <Switch>
-            
+           {error? <Oops />:
+           <Switch>
+
               {loading? 
               <Route exact path="/"> <Loading /> </Route>:
               <Route  exact path="/" 
-                      render={ () => <NewsList news={this.state.news} />} />
+                     render={ () =>  <NewsList news={this.state.news} />} />
               }
-    
+              
               <Route exact path="/about" >
                       {searchActive ? <Redirect to="/" /> : <About />}
               </Route>
@@ -78,7 +85,7 @@ import Loading from './Loading';
               <Route exact path="/contact" >
                       {searchActive ? <Redirect to="/" /> : <Contact />}
               </Route>
-          </Switch>
+          </Switch> }
         <Footer />
       </div>
     );

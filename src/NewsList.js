@@ -10,7 +10,7 @@ class NewsList extends Component{
         <NewsItem
             key={n.url}     // url for each news article should be unique, hence is used here as key
             {...n}
-            />
+        />
         ));
         return(
             <div className="newslist">
