@@ -5,21 +5,14 @@ class Oops extends Component{
     render(){
 
         return(
-        <div    style={{
-                margin: '25px 0px 20px 20px',
-                textalign: 'center',
-                horizontalalign: 'center',
-                verticalalign: 'middle',
-
-                }}
-        >
+        <div    className="oops">
                 
-            <h1> Oops! Something went wrong. </h1>
-            <p> The most likely cause it that the daily amount of free news request on NewsAPI have been exceeded (500 per day) </p>
-            <p> In a way that is great news in it self since it means the site is frequently used!! </p>
-            <p> If this keeps happinnig the hosting package will be potentially upgraded </p>
+            <h2 > Oops! Something went wrong. </h2>
+            <p2 > The most likely cause therefore is that the daily amount of free news request on NewsAPI have been exceeded (500 per day). </p2>
+            <p2 > In a way that is great news in it self, since it means the site is frequently used!! </p2>
+            <p2 > If this keeps happinnig I update the hosting package to allow for more traffic. </p2>
             
-            <h1> Have great day and please come back tomorrow! </h1>
+            <h2 > Have great day and please come back tomorrow! </h2>
             
         </div>
             );

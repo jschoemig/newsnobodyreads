@@ -19,10 +19,25 @@ h1{
  font-size:25px;
 }
 
+h2{
+ font-family:Georgia,serif;
+ color:#4E443C;
+ font-variant: small-caps; text-transform: none; font-weight: 100; margin-bottom: 0;
+ font-size:25px;
+ text-align:center;
+}
+
 p{
         font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
         font-size: 14px;
         margin-top: .5em; color: #666;
+}
+
+p2{
+        font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+        font-size: 14px;
+        margin-top: .5em; color: #666;
+        text-align:center;
 }
 
 /* ----------------- Nav ----------------- */
@@ -183,6 +198,18 @@ p{
 .contact{
   margin:10px 10px 25px 25px;
 }
+
+
+/* Error / Oops section */
+
+.oops{
+  margin: 25px 0px 20px 0px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+
 
 
 /* --------------- Footer Section ------------------------ */
