@@ -21,13 +21,12 @@ function handleErrors(resp) {
       if(search){
         return fetch(proxyUrl + url + val + s + key)            // because it is an async function 
                 .then(handleErrors)
-                .then( resp => { return resp.json() });
+                .catch( err =>  console.log(err) );
 
       } else {
         return fetch(proxyUrl + url + qInTitle + s + key)            // because it is an async function 
                 .then(handleErrors)
-                .then( resp => { return resp.json() })
-                .catch( err =>  console.log(err.text) );
+                .catch( err =>  console.log(err) );
       }
         
   }

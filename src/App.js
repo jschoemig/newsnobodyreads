@@ -21,7 +21,7 @@ import Oops from './Oops';
             news: [],
             searchActive:false,
             loading:false,
-            error:true
+            error:false
         };
     }
     
