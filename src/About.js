@@ -56,6 +56,7 @@ class About extends Component{
                 <h1>
                     This is the story behind the project!
                 </h1>
+                <br></br>
                 <p> 
                    Do you feel that general news often focus on the negative side of human nature and interaction?
                 </p>

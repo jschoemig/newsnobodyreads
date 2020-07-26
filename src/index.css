@@ -188,11 +188,37 @@ p{
   margin:10px 10px 25px 25px;
 }
 
+.technical .techpic{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction:row;
+}
+
+
+.technical img{
+    width: 75px;
+    height: 75px;
+    border-radius:15px;
+    margin: 0px 10px 35px 10px;
+
+}
+
+
 
 /* Contact section */ 
 
 .contact{
   margin:10px 10px 25px 25px;
+}
+
+.contact .email{
+  color:#4E443C;
+  font-size:20px;
+}
+
+.contact .name{
+  
 }
 
 

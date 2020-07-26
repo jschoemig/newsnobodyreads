@@ -8,7 +8,7 @@ const key           = '&sortBy=relevancy&apiKey=1894a0623e654d328392e2cc7ff458a4
 const proxyUrl      = 'https://cors-anywhere.herokuapp.com/';       // this proxy url serves as middleware - hence, my api request connects with heroku and they make the API call for me
         
   
-
+// https://crossorigin.me/ or https://cors-anywhere.herokuapp.com/
   
 function handleErrors(resp) {
     if (!resp.ok)  throw new Error(resp.text);
