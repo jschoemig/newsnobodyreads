@@ -58,24 +58,25 @@ class About extends Component{
                 </h1>
                 <br></br>
                 <p> 
-                   Do you feel that general news often focus on the negative side of human nature and interaction?
+                   Do you feel that news generally are often focus on the negativity and scandals?
                 </p>
                 <p> 
-                   Have you noticed that violence and scandals attract public attention more than positive events?
+                   Have you noticed that violence and chrisis attract public attention more than positive events?
                 </p>
                  <p> 
-                    Do you think that rather than being fully objective general news selects stories often on their profit potential?
+                    Do you think that the objective of news agencies is primarily to generate money and not presenting a fair presentation of the world?
                 </p>
                 <p> 
                     These thoughts are the motivation behind the project. 
                     Due to the three raised points, I believe general global news are biased towards negative events.
-                    Where I believe that humans are more inclined to watch the negative, scandalous side of things, I believe at the same time that this natural instint does not always do us good. 
-                    Now NewsNobodyReads.com tries lie the focus specifically on the more positive side of global news.
-                    So what you see on here is what what's really going on in the world today.
-                    To prevent anyone can jump to the scandalous article about mass murdering, or financial anxiety these news are excluded from that page.
-                    This website only allows you to inform yourself about the positive events which are going on in the world. 
-                    And where NewsNobodyReads.com is clearly biased towards on side of the coin that is very much intended. 
-                    It serves as a counterweight to general news webpages out there and human inclincation in general. 
+                    It might be natural for humans to be more inclined to watch the negative, scandalous side of things, but at the same time this does not always do us good. 
+                    Sometimes a break from the negativity can be good to take an example of the positive things happeing around us. 
+                    Hence, NewsNobodyReads.com lies the focus specifically on the more positive side of global news.
+                    So what you see on here does not aim at giving you a thorough balanced view of the world. 
+                    You are only presented with positive news as an antitode to the heavily biased commonly available media. 
+                    
+                    Note: the website is still under construction and hence you will see that there are negative news article showing in your feed. 
+                    This will be adressed in the short term! Come back regularly to see the progress! 
                 </p>
                 <p>
                     What you see on the landing page of the website is the product of filter algorithm of thousands of live global news articles as provided by NewsApi. 
