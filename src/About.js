@@ -94,7 +94,7 @@ class About extends Component{
                 </p>
             </div>
             <div className="slider"> 
-                
+                <Slider {...settings}>
                     <div>
                        <img src={alj} alt="al-jazeera-en"></img>
                     </div>
@@ -122,7 +122,7 @@ class About extends Component{
                     <div>
                       <img src={wsj} alt="wall-street-journal"></img>
                     </div>
-               
+               </Slider>
             </div>
         </div>
         );
