@@ -1,15 +1,15 @@
 import wordlist from './WordList';
 import sources from './Sources';
 
-const url           = 'http://newsapi.org/v2/everything?qInTitle=';         // everthing and then filtered
+const url           = 'newsapi.org/v2/everything?qInTitle=';         // everthing and then filtered
 const qInTitle      =  wordlist;                                    // only q for search in title and body
 const s             =  sources;
 const key           = '&sortBy=relevancy&apiKey=1894a0623e654d328392e2cc7ff458a4';      // sortBy popularity - relevancy - publishedAt (default)
-const proxyUrl      = 'https://robwu.nl/cors-anywhere.html/';       // this proxy url serves as middleware - hence, my api request connects with heroku and they make the API call for me
+const proxyUrl      = 'https://cors-anywhere.herokuapp.com/';       // this proxy url serves as middleware - hence, my api request connects with heroku and they make the API call for me
 
         
  
-// https://crossorigin.me/ or https://cors-anywhere.herokuapp.com/
+// https://crossorigin.me/ or https://cors-anywhere.herokuapp.com/, not https://robwu.nl/cors-anywhere.html/ didn't work
   
 function handleErrors(resp) {
     if (!resp.ok)  throw new Error(resp.text);
