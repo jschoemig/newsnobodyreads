@@ -1,9 +1,6 @@
-const sources = `&sources=al-jazeera-english,bbc-news,google-news`;
-
-/*
 const sources = `&sources=al-jazeera-english,bbc-news,bloomberg,time,business-insider,
 the-washington-post,cbc-news,cnn,the-wall-street-journal,the-huffington-post,reuters,fortune,national-geographic,google-news`;
-*/
+
 
 /*
 abc-news, al-jazeera-english,axios, bbc-news,associated-press, 

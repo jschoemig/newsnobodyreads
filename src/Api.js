@@ -5,7 +5,7 @@ const url           = 'http://newsapi.org/v2/everything?qInTitle=';         // e
 const qInTitle      =  wordlist;                                    // only q for search in title and body
 const s             =  sources;
 const key           = '&sortBy=relevancy&apiKey=1894a0623e654d328392e2cc7ff458a4';      // sortBy popularity - relevancy - publishedAt (default)
-const proxyUrl      = 'https://cors-anywhere.herokuapp.com/';       // this proxy url serves as middleware - hence, my api request connects with heroku and they make the API call for me
+const proxyUrl      = 'https://robwu.nl/cors-anywhere.html/';       // this proxy url serves as middleware - hence, my api request connects with heroku and they make the API call for me
 
         
  
