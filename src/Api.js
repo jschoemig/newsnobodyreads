@@ -20,12 +20,12 @@ function handleErrors(resp) {
 
   export async function getNews(val,search){
       if(search){
-        return fetch( url + val + s + key)            // because it is an async function 
+        return fetch( proxyUrl + url + val + s + key)            // because it is an async function 
                 .then(handleErrors)
                 .catch( err =>  console.log(err) );
 
       } else {
-        return fetch( url + qInTitle + s + key)            // because it is an async function 
+        return fetch( proxyUrl + url + qInTitle + s + key)            // because it is an async function 
                 .then(handleErrors)
                 .catch( err =>  console.log(err) );
       }
